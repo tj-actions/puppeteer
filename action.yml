@@ -1,0 +1,20 @@
+name: puppeteer
+description: Run Test through Puppeteer, the headless chrome Node API
+author: tj-actions
+inputs:
+  token:
+    description: 'GITHUB_TOKEN or a Repo scoped PAT'
+    required: true
+    default: ${{ github.token }}
+  node-version:
+    description: 'Node version'
+    required: false
+    default: '10'
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: camera-off
+  color: green
