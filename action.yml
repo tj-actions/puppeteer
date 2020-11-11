@@ -10,16 +10,16 @@ inputs:
     description: 'Node version'
     required: false
     default: '10'
-  run-args:
-    description: 'Run argument'
-    required: false
-    default: ''
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - --build-arg NODE_VERSION=${{ inputs.node-version }} ${{ inputs.run-args }}
+  using: 'composite'
+  steps:
+    - id: build
+      run: docker build --build-arg NODE_VERSION=${{ inputs.node-version }} ${{ inputs.args }} -t puppetter .
+      shell: bash
+    - id: run
+      run: docker run --rm -v $(pwd):/github/workspace --workdir /github/workspace puppeteer
+      shell: bash
 branding:
   icon: camera-off
   color: green
