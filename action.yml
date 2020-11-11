@@ -15,8 +15,9 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    NODE_VERSION: ${{ inputs.node-version }}
+  args:
+    - --build-arg NODE_VERSION=${{ inputs.node-version }}
+    - ${{ input.args }}
 branding:
   icon: camera-off
   color: green
