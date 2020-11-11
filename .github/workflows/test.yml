@@ -17,16 +17,16 @@ jobs:
         uses: actions/checkout@v2
       - name: Test action with node 10
         uses: ./
-      - name: Test action with node 11
-        uses: ./
-        with:
-          node-version: '11'
       - name: Test action with node 12
         uses: ./
         with:
           node-version: '12'
-      - name: Test action with node 13
+      - name: Test action with node 14
         uses: ./
         with:
-          node-version: '13'
+          node-version: '14'
+      - name: Test action with node 15
+        uses: ./
+        with:
+          node-version: '15'
 
