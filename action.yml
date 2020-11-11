@@ -15,10 +15,10 @@ runs:
   using: 'composite'
   steps:
     - id: build
-      run: docker build --build-arg NODE_VERSION=${{ inputs.node-version }} ${{ inputs.args }} -t puppetter .
+      run: docker build --build-arg NODE_VERSION=${{ inputs.node-version }} -t puppetter:local .
       shell: bash
     - id: run
-      run: docker run --rm -v $(pwd):/github/workspace --workdir /github/workspace puppeteer
+      run: docker run --rm -v $(pwd):/github/workspace --workdir /github/workspace puppetter:local ${{ inputs.args }}
       shell: bash
 branding:
   icon: camera-off
