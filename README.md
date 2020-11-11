@@ -10,11 +10,11 @@ Run Test through Puppeteer, the headless chrome Node API
       - name: Install dependencies
         uses: tj-actions/puppeteer@v1
         with:
-          args: yarn install
+          run-args: yarn install
       - name: Run test
         uses: tj-actions/puppeteer@v1
         with:
-          args: yarn test
+          run-args: yarn test
 ```
 
 
@@ -24,7 +24,7 @@ Run Test through Puppeteer, the headless chrome Node API
 |:-------------:|:-----------:|:-------------:|:---------------------:|
 | token         |  `string`   |    `false`    | `${{ github.token }}` |
 | node-version  |  `string`   |    `false`    | `10`                  |
-| args         |  `string`   |    `false`    | `` |
+| run-args         |  `string`   |    `false`    | `` |
 
 
 

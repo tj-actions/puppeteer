@@ -10,14 +10,16 @@ inputs:
     description: 'Node version'
     required: false
     default: '10'
-
+  run-args:
+    description: 'Run argument'
+    required: false
+    default: ''
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - --build-arg NODE_VERSION=${{ inputs.node-version }}
-    - ${{ input.args }}
+    - --build-arg NODE_VERSION=${{ inputs.node-version }} ${{ input.run-args }}
 branding:
   icon: camera-off
   color: green
