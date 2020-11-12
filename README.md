@@ -24,7 +24,7 @@ Run Test through Puppeteer, the headless chrome Node API
 |:-------------:|:-----------:|:-------------:|:---------------------:|
 | token         |  `string`   |    `false`    | `${{ github.token }}` |
 | node-version  |  `string`   |    `false`    | `10`                  |
-| run-args         |  `string`   |    `false`    | `` |
+| run-args         |  `string`   |    `false`    |  |
 
 
 
