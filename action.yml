@@ -1,4 +1,4 @@
-name: puppeteer-test
+name: puppeteer-test-action
 description: Run Test through Puppeteer, the headless chrome Node API
 author: tj-actions
 inputs:
