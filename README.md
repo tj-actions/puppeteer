@@ -8,11 +8,11 @@ Run Test through Puppeteer, the headless chrome Node API
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        uses: tj-actions/puppeteer@v1
+        uses: tj-actions/puppeteer@v2
         with:
           args: yarn install
       - name: Run test
-        uses: tj-actions/puppeteer@v1
+        uses: tj-actions/puppeteer@v2
         with:
           args: yarn test
 ```
