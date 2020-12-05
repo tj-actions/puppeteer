@@ -19,3 +19,5 @@ ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 
 RUN npm i -g puppeteer \
     puppeteer-cluster
+
+RUN node --version
