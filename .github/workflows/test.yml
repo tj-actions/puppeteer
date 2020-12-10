@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: |
-          echo "${{ github.ref }}"
       - name: Test action with node 10
         uses: ./
       - name: Test action with node 12
