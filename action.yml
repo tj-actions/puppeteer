@@ -10,6 +10,9 @@ inputs:
     description: 'Node version'
     required: false
     default: '10'
+  args:
+    description: 'Command to run puppeteer'
+    required: true
 
 runs:
   using: 'composite'
