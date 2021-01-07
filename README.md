@@ -1,6 +1,8 @@
 puppeteer
 ---------
 
+[![CI](https://github.com/tj-actions/puppeteer/workflows/CI/badge.svg)](https://github.com/tj-actions/puppeteer/actions?query=workflow%3ACI)
+
 Run Test through Puppeteer, the headless chrome Node API
 
 ```yaml
