@@ -25,4 +25,4 @@ runs:
       shell: bash
 branding:
   icon: camera-off
-  color: green
+  color: white
