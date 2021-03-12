@@ -1,5 +1,5 @@
-puppeteer
----------
+[puppeteer](https://github.com/puppeteer/puppeteer)
+----------
 
 [![CI](https://github.com/tj-actions/puppeteer/workflows/CI/badge.svg)](https://github.com/tj-actions/puppeteer/actions?query=workflow%3ACI) [![Update release version.](https://github.com/tj-actions/puppeteer/actions/workflows/sync-release-version.yml/badge.svg)](https://github.com/tj-actions/puppeteer/actions/workflows/sync-release-version.yml)
 
