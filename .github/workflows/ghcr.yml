@@ -44,4 +44,3 @@ jobs:
           build-args: NODE_VERSION=${{ matrix.node-version }}
           tags: |
             ghcr.io/${{ github.repository }}:node-${{ matrix.node-version }}
-            ghcr.io/${{ github.repository }}:${{ steps.branch-name.outputs.tag }}-node-${{ matrix.node-version }}
