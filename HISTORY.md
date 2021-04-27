@@ -1,5 +1,13 @@
 # Changelog
 
+## [v3.1](https://github.com/tj-actions/puppeteer/tree/v3.1) (2021-04-27)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v3...v3.1)
+
+**Merged pull requests:**
+
+- Upgraded to v3 [\#7](https://github.com/tj-actions/puppeteer/pull/7) ([jackton1](https://github.com/jackton1))
+
 ## [v3](https://github.com/tj-actions/puppeteer/tree/v3) (2021-04-26)
 
 [Full Changelog](https://github.com/tj-actions/puppeteer/compare/v2.1...v3)
