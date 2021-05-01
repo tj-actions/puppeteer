@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        node-version: [10, 12, 14, 15]
+        node-version: [10, 12, 14, 15, 16]
 
     steps:
       - name: Checkout
@@ -36,7 +36,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Build and push node 10
+      - name: Build and push node ${{ matrix.node-version }}
         uses: docker/build-push-action@v2
         with:
           context: .
