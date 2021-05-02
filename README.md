@@ -10,11 +10,11 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        uses: tj-actions/puppeteer@v3.1
+        uses: tj-actions/puppeteer@v3.2
         with:
           args: yarn install
       - name: Run test
-        uses: tj-actions/puppeteer@v3.1
+        uses: tj-actions/puppeteer@v3.2
         with:
           args: yarn test
 ```

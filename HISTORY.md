@@ -1,5 +1,15 @@
 # Changelog
 
+## [v3.2](https://github.com/tj-actions/puppeteer/tree/v3.2) (2021-05-02)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v3.1...v3.2)
+
+**Merged pull requests:**
+
+- Bump tj-actions/sync-release-version from v8 to v8.5 [\#10](https://github.com/tj-actions/puppeteer/pull/10) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Upgrade to GitHub-native Dependabot [\#9](https://github.com/tj-actions/puppeteer/pull/9) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Upgraded to v3.1 [\#8](https://github.com/tj-actions/puppeteer/pull/8) ([jackton1](https://github.com/jackton1))
+
 ## [v3.1](https://github.com/tj-actions/puppeteer/tree/v3.1) (2021-04-27)
 
 [Full Changelog](https://github.com/tj-actions/puppeteer/compare/v3...v3.1)
