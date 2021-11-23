@@ -4,6 +4,14 @@
 
 Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headless chrome Node API
 
+## Environment Variables
+
+- `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
+- `PUPPETEER_EXECUTABLE_PATH`
+
+
+## Usage
+
 ```yaml
 ...
     steps:
@@ -25,12 +33,6 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 | token         |  `string`   |    `false`    | `${{ github.token }}` |
 | node-version  |  `string`   |    `false`    | `10`                  |
 | args         |  `string`   |    `true`    |                        |
-
-
-## Environment Variables
-
-- `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
-- `PUPPETEER_EXECUTABLE_PATH`
 
 *   Free software: [MIT license](LICENSE)
 
