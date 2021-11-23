@@ -6,9 +6,8 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 ## Environment Variables
 
-- `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
-- `PUPPETEER_EXECUTABLE_PATH`
-
+*   `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
+*   `PUPPETEER_EXECUTABLE_PATH`
 
 ## Usage
 
