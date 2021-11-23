@@ -9,7 +9,7 @@ inputs:
   node-version:
     description: 'Node version'
     required: false
-    default: '10'
+    default: '14'
   args:
     description: 'Command to run puppeteer'
     required: true
