@@ -26,6 +26,12 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 | node-version  |  `string`   |    `false`    | `10`                  |
 | args         |  `string`   |    `true`    |                        |
 
+
+## Environment Variables
+
+- `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
+- `PUPPETEER_EXECUTABLE_PATH`
+
 *   Free software: [MIT license](LICENSE)
 
 If you feel generous and want to show some extra appreciation:
