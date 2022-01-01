@@ -26,6 +26,12 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
           args: yarn test
 ```
 
+### Using docker 
+
+```shell script
+docker pull ghcr.io/tj-actions/puppeteer:node-12
+```
+
 ## Inputs
 
 |   Input       |    type    |  required     |  default             |
