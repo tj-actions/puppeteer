@@ -34,19 +34,21 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 | node-version  |  `string`   |    `false`    | `10`                  |
 | args         |  `string`   |    `true`    |                        |
 
-
 ### Using docker
 
 ```shell script
 docker pull ghcr.io/tj-actions/puppeteer:node-12
 ```
 
-Supported node versions: 
-- 10
-- 12
-- 14
-- 15
-- 16
+Supported node versions:
+
+*   10
+*   12
+*   14
+*   15
+*   16
+
+<!---->
 
 *   Free software: [MIT license](LICENSE)
 
