@@ -32,6 +32,8 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 docker pull ghcr.io/tj-actions/puppeteer:node-12
 ```
 
+Supported node versions: 10, 12, 14, 16
+
 ## Inputs
 
 |   Input       |    type    |  required     |  default             |
