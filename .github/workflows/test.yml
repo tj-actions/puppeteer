@@ -10,23 +10,17 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
     name: Test puppeteer
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ubuntu-latest]
+        node-version: [10, 14, 15, 16]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.2.0
-      - name: Test action with node 10
-        uses: ./
-      - name: Test action with node 12
+      - name: Test action with node ${{ matrix.node-version }}
         uses: ./
         with:
-          node-version: '12'
-      - name: Test action with node 14
-        uses: ./
-        with:
-          node-version: '14'
-      - name: Test action with node 15
-        uses: ./
-        with:
-          node-version: '15'
-
+          node-version: ${{ matrix.node-version }}

@@ -17,7 +17,6 @@ RUN apt-get update \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 
-RUN npm i -g puppeteer \
-    puppeteer-cluster
+RUN npm i -g puppeteer@19.0.0 puppeteer-cluster@0.23.0
 
 RUN node --version
