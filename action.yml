@@ -37,8 +37,9 @@ runs:
         cache-to: |
           type=gha,mode=max
 
-    - id: run
+    - name: Docker Run
       uses: docker://${{ github.repository }}:local-node-${{ inputs.node-version }}
+      id: docker-run
       with:
         args: ${{ inputs.args }}
 branding:
