@@ -30,6 +30,16 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 ## Inputs
 
+<!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
+
+|    INPUT     |  TYPE  | REQUIRED |         DEFAULT         |            DESCRIPTION            |
+|--------------|--------|----------|-------------------------|-----------------------------------|
+|     args     | string |   true   |                         |     Command to run puppeteer      |
+| node-version | string |  false   |         `"14"`          |           Node version            |
+|    token     | string |   true   | `"${{ github.token }}"` | GITHUB\_TOKEN or a Repo scoped PAT |
+
+<!-- AUTO-DOC-INPUT:END -->
+
 |   Input       |    type    |  required     |  default             |
 |:-------------:|:-----------:|:-------------:|:---------------------:|
 | token         |  `string`   |    `false`    | `${{ github.token }}` |
