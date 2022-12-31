@@ -32,11 +32,11 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE  | REQUIRED |         DEFAULT         |            DESCRIPTION            |
-|--------------|--------|----------|-------------------------|-----------------------------------|
-|     args     | string |   true   |                         |     Command to run puppeteer      |
-| node-version | string |  false   |         `"14"`          |           Node version            |
-|    token     | string |   true   | `"${{ github.token }}"` | GITHUB\_TOKEN or a Repo scoped PAT |
+|    INPUT     |  TYPE  | REQUIRED |         DEFAULT         |                                                                                                                                                  DESCRIPTION                                                                                                                                                  |
+|--------------|--------|----------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     args     | string |   true   |                         |                                                                                                                                           Command to run puppeteer                                                                                                                                            |
+| node-version | string |  false   |         `"14"`          |                                                                                                                                                 Node version                                                                                                                                                  |
+|    token     | string |   true   | `"${{ github.token }}"` | [GITHUB\_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) or a repo scoped [PersonalAccess Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) |
 
 <!-- AUTO-DOC-INPUT:END -->
 
