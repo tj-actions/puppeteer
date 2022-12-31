@@ -40,12 +40,6 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 <!-- AUTO-DOC-INPUT:END -->
 
-|   Input       |    type    |  required     |  default             |
-|:-------------:|:-----------:|:-------------:|:---------------------:|
-| token         |  `string`   |    `false`    | `${{ github.token }}` |
-| node-version  |  `string`   |    `false`    | `10`                  |
-| args         |  `string`   |    `true`    |                        |
-
 ### Using docker
 
 ```shell script
