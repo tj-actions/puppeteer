@@ -38,7 +38,7 @@ runs:
           type=gha,mode=max
 
     - name: Docker Run
-      uses: docker://${{ github.repository }}:local-node-${{ inputs.node-version }}
+      uses: docker://puppeteer:local-node-${{ inputs.node-version }}
       id: docker-run
       with:
         args: ${{ inputs.args }}
