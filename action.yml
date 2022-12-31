@@ -3,7 +3,7 @@ description: Run Test through Puppeteer, the headless chrome Node API
 author: tj-actions
 inputs:
   token:
-    description: 'GITHUB_TOKEN or a Repo scoped PAT'
+    description: '[GITHUB_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) or a repo scoped [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)'
     required: true
     default: ${{ github.token }}
   node-version:
