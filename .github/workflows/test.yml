@@ -24,4 +24,4 @@ jobs:
         uses: ./
         with:
           node-version: ${{ matrix.node-version }}
-          args: npx test/test.js
+          args: node test/test.js

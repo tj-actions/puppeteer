@@ -1,2 +1,5 @@
 .idea/
 .envrc
+
+node_modules
+
