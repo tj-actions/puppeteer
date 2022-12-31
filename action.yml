@@ -17,12 +17,30 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - id: build
-      run: docker build --build-arg NODE_VERSION=${{ inputs.node-version }} -t puppetter:local-node${{ inputs.node-version }} .
-      shell: bash
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2.1.0
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2.2.1
+
+    - name: Docker Build
+      uses: docker/build-push-action@v3
+      id: docker-build
+      with:
+        context: .
+        load: true
+        push: false
+        tags: ${{ github.repository }}:local-node-${{ inputs.node-version }}
+        cache-from: |
+          ghcr.io/${{ github.repository }}:node-${{ inputs.node-version }}
+          type=gha
+        cache-to: |
+          type=gha,mode=max
+
     - id: run
-      run: docker run --rm -v $(pwd):/github/workspace --workdir /github/workspace puppetter:local-node${{ inputs.node-version }} ${{ inputs.args }}
-      shell: bash
+      uses: docker://${{ github.repository }}:local-node-${{ inputs.node-version }}
+      with:
+        args: ${{ inputs.args }}
 branding:
   icon: camera-off
   color: white
