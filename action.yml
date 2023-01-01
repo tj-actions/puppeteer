@@ -27,6 +27,7 @@ runs:
       with:
         image: ${{ inputs.image }}
         options: '--cap-add=SYS_ADMIN'
+        workdir: /app
         args: ${{ inputs.args }}
     - name: Docker Run with ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}
       if: ${{ inputs.image }} == ''
