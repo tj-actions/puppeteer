@@ -17,7 +17,7 @@ runs:
       uses: tj-actions/docker-run-action@v1
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
-        options: '--cap-add=SYS_ADMIN'
+        options: '-i --init --cap-add=SYS_ADMIN'
         workdir: ${{ inputs.working-directory }}
         args: ${{ inputs.args }}
 
