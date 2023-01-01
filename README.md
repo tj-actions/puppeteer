@@ -7,11 +7,6 @@
 
 Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headless chrome Node API
 
-## Environment Variables
-
-*   `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
-*   `PUPPETEER_EXECUTABLE_PATH`
-
 ## Usage
 
 ```yaml
@@ -42,19 +37,6 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 ## Outputs
 
-### Using docker
-
-```shell script
-docker pull ghcr.io/tj-actions/puppeteer:node-14
-```
-
-| Supported node versions |
-|:------------------------:|
-|   14  |
-|   15  |
-|   16  |
-
-<!---->
 
 *   Free software: [MIT license](LICENSE)
 
