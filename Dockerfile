@@ -32,4 +32,4 @@ FROM base AS dev
 
 COPY --from=build /app/node_modules node_modules
 
-RUN node --version && npm --version && puppeteer --version
+RUN node --version && npm --version
