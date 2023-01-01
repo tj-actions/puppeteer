@@ -5,16 +5,21 @@ inputs:
   files:
     description: 'Files to run'
     required: true
+  post-run-command:
+    description: 'Command to run after tests'
+    required: false
+    default: 'echo "No post-run-command specified"'
 
 runs:
   using: 'composite'
   steps:
     - name: Run puppeteer
-      uses: tj-actions/docker-run-action@v2
+      uses: tj-actions/docker-run@v2
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
-        options: '-i --init --cap-add=SYS_ADMIN -v ${{ github.workspace }}:${{ github.workspace }}'
-        args: bash -c 'while read -r file; do echo "Running $file..." && mkdir -p $(dirname /home/pptruser/$file) && cp ${{ github.workspace }}/$file /home/pptruser/$file && node $file; done <<< "$(echo "${{ inputs.files }}" | xargs -n1)"'
+        options: '-i --init --cap-add=SYS_ADMIN -v ${{ github.workspace }}:${{ github.workspace }} --name puppeteer-chrome'
+        args: |
+          bash -c 'while read -r file; do echo "Running $file..." && mkdir -p $(dirname /home/pptruser/$file) && cp ${{ github.workspace }}/$file /home/pptruser/$file && node $file && echo "Completed executing $file" && ${{ inputs.post-run-command }}; done <<< "$(echo "${{ inputs.files }}" | xargs -n1)"'
 
 
 branding:

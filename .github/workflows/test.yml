@@ -23,7 +23,5 @@ jobs:
       - name: Test action
         uses: ./
         with:
-          files: |
-            test/test.js
-
-      - run: cat test.pdf
+          files: test/test.js
+          post-run-command: cd test && cat test.pdf
