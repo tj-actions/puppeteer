@@ -21,7 +21,7 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
             test/test.js
 ```
 
-See [test](https://github.com/tj-actions/puppeteer/blob/main/.github/workflows/test.yml) for a more examples
+See [test](https://github.com/tj-actions/puppeteer/blob/main/.github/workflows/test.yml) for more examples
 
 ## Inputs
 
