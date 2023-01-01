@@ -1,6 +1,6 @@
 ARG NODE_VERSION
 
-FROM node:$NODE_VERSION-buster
+FROM node:$NODE_VERSION-buster AS base
 
 RUN apt-get update \
      # See https://crbug.com/795759
@@ -16,12 +16,18 @@ RUN apt-get update \
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
+
+
+FROM base AS build
+
 ENV NODE_VERSION $NODE_VERSION
 
-RUN if [ "$(echo "$NODE_VERSION" | cut -d '.' -f 1)" -lt 14 ]; then \
-    npm i puppeteer@13.7.0 && npm i puppeteer-cluster; \
-  else \
-    npm i puppeteer@19.2.2 && npm i puppeteer-cluster; \
-  fi
+ADD package.json package-lock.json /app/
+
+WORKDIR /app
+
+RUN npm install --production
+
+FROM base AS dev
 
 RUN node --version

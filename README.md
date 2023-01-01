@@ -48,8 +48,6 @@ docker pull ghcr.io/tj-actions/puppeteer:node-12
 
 | Supported node versions |
 |:------------------------:|
-|   10  |
-|   12  |
 |   14  |
 |   15  |
 |   16  |
