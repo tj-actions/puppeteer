@@ -2,10 +2,6 @@ name: puppeteer-chrome
 description: Run Test through Puppeteer, the headless chrome Node API
 author: tj-actions
 inputs:
-  working-directory:
-    description: 'Working directory'
-    required: false
-    default: '.'
   args:
     description: 'Command to run puppeteer'
     required: true
@@ -18,7 +14,6 @@ runs:
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
         options: '-i --init --cap-add=SYS_ADMIN'
-        workdir: ${{ inputs.working-directory }}
         args: ${{ inputs.args }}
 
 

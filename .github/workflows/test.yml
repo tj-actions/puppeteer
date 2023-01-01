@@ -23,4 +23,4 @@ jobs:
       - name: Test action
         uses: ./
         with:
-          args: node -e "`cat test/test.js`"
+          args: node test/test.py
