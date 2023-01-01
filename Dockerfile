@@ -32,6 +32,8 @@ ADD package.json package-lock.json /app/
 
 WORKDIR /app
 
+RUN chown -R chrome:chrome /app
+
 RUN npm install --production
 
 FROM base AS dev
