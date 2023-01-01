@@ -14,9 +14,15 @@ RUN apt-get update \
      && apt-get install -y google-chrome-stable --no-install-recommends \
      && rm -rf /var/lib/apt/lists/*
 
+# Create a user to run Chrome as
+RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
+    && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
+
+# Run Chrome as non-privileged user
+USER chrome
+
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
-
 
 FROM base AS build
 
