@@ -25,3 +25,5 @@ jobs:
         with:
           files: |
             test/test.js
+
+      - run: cat test.pdf
