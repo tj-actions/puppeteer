@@ -18,9 +18,6 @@ RUN apt-get update \
 RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
     && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
 
-# Run Chrome as non-privileged user
-USER chrome
-
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 
@@ -39,5 +36,10 @@ RUN npm install --production
 FROM base AS dev
 
 COPY --from=build /app/node_modules node_modules
+
+RUN chown -R chrome:chrome node_modules
+
+# Run Chrome as non-privileged user
+USER chrome
 
 RUN node --version && npm --version
