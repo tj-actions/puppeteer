@@ -38,10 +38,11 @@ runs:
           type=gha,mode=max
 
     - name: Docker Run
-      uses: docker://puppeteer:local-node-${{ inputs.node-version }}
-      id: docker-run
+      uses: tj-actions/docker-run-action@v1
       with:
+        image: docker://puppeteer:local-node-${{ inputs.node-version }}
         args: ${{ inputs.args }}
+
 branding:
   icon: camera-off
   color: white
