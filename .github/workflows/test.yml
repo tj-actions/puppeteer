@@ -23,5 +23,4 @@ jobs:
       - name: Test action
         uses: ./
         with:
-          working-directory: test
-          args: node test.js
+          args: node -e "`cat test/test.js`"
