@@ -15,7 +15,8 @@ runs:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
         # Also copy the files to the container
         options: '-i --init --cap-add=SYS_ADMIN -v ${{ github.workspace }}:${{ github.workspace }}'
-        args: bash -c "for file in ${{ inputs.files }}; do cp ${{ github.workspace }}/$file /home/pptruser && node $file; done"
+        # Using bash -c run a while loop over all files provided bu inputs.files and run cp ${{ github.workspace }}/$file /home/pptruser && node $file
+        args: bash -c 'while read -r file; do cp ${{ github.workspace }}/$file /home/pptruser/$file && node $file; done <<< "${{ inputs.files }}"'
 
 
 branding:
