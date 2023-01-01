@@ -30,6 +30,7 @@ runs:
         context: .
         load: true
         push: false
+        build-args: NODE_VERSION=${{ inputs.node-version }}
         tags: ${{ github.repository }}:local-node-${{ inputs.node-version }}
         cache-from: |
           ghcr.io/${{ github.repository }}:node-${{ inputs.node-version }}
