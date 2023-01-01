@@ -15,9 +15,15 @@ RUN apt-get update \
      && apt-get install -y google-chrome-stable --no-install-recommends \
      && rm -rf /var/lib/apt/lists/*
 
+ENV WORKDIR $WORKDIR
+
+WORKDIR $WORKDIR
+
 # Create a user to run Chrome as
 RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
-    && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
+    && mkdir -p /home/chrome \
+    && chown -R chrome:chrome /home/chrome \
+    && chown -R chrome:chrome $WORKDIR
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
@@ -26,19 +32,13 @@ FROM base AS build
 
 ENV NODE_VERSION $NODE_VERSION
 
-ADD package.json package-lock.json /app/
-
-WORKDIR /app
+ADD package.json package-lock.json ./
 
 RUN chown -R chrome:chrome /app
 
 RUN npm install --production
 
 FROM base AS dev
-
-ENV WORKDIR $WORKDIR
-
-WORKDIR $WORKDIR
 
 COPY --from=build /app/node_modules $WORKDIR/node_modules
 
