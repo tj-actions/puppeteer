@@ -7,25 +7,18 @@
 
 Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headless chrome Node API
 
-## Environment Variables
-
-*   `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`
-*   `PUPPETEER_EXECUTABLE_PATH`
-
 ## Usage
 
 ```yaml
 ...
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: tj-actions/puppeteer@v3.2
-        with:
-          args: yarn install
       - name: Run test
         uses: tj-actions/puppeteer@v3.2
+        id: puppeteer
         with:
-          args: yarn test
+          files: |
+            test/test.js
 ```
 
 ## Inputs
@@ -40,21 +33,8 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 <!-- AUTO-DOC-INPUT:END -->
 
-### Using docker
+## Outputs
 
-```shell script
-docker pull ghcr.io/tj-actions/puppeteer:node-12
-```
-
-| Supported node versions |
-|:------------------------:|
-|   10  |
-|   12  |
-|   14  |
-|   15  |
-|   16  |
-
-<!---->
 
 *   Free software: [MIT license](LICENSE)
 

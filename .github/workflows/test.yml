@@ -11,16 +11,23 @@ on:
 jobs:
   test:
     name: Test puppeteer
-    runs-on: ${{ matrix.platform }}
-    strategy:
-      fail-fast: false
-      matrix:
-        platform: [ubuntu-latest]
-        node-version: [10, 12, 14, 15, 16]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3.2.0
-      - name: Test action with node ${{ matrix.node-version }}
+
+      - name: Test action
         uses: ./
+        id: puppeteer-test
         with:
-          node-version: ${{ matrix.node-version }}
+          files: test/test.js
+
+      - name: Copy test output
+        uses: tj-actions/docker-cp@v2
+        with:
+          container: ${{ steps.puppeteer-test.outputs.container-id }}
+          source: ${{ steps.puppeteer-test.outputs.home }}/test.pdf
+          destination: test.pdf
+
+      - name: Display contents of test.pdf
+        run: cat test.pdf
