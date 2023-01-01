@@ -22,7 +22,7 @@ jobs:
         with:
           files: test/test.js
 
-      - name: Copy from container to host
+      - name: Copy test output
         uses: tj-actions/docker-cp@v2
         with:
           container: ${{ steps.puppeteer-test.outputs.container-id }}
