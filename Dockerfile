@@ -18,10 +18,10 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 ENV NODE_VERSION $NODE_VERSION
 
-RUN npm i -g npm && if [ "$(echo "$NODE_VERSION" | cut -d '.' -f 1)" -lt 14 ]; then \
-    npm i -g puppeteer@13.7.0 && npm i -g puppeteer-cluster@0.3.2; \
+RUN if [ "$(echo "$NODE_VERSION" | cut -d '.' -f 1)" -lt 14 ]; then \
+    npm i -g puppeteer@13.7.0 && npm i -g puppeteer-cluster; \
   else \
-    npm i -g puppeteer@19.2.2 && npm i -g puppeteer-cluster@0.3.2; \
+    npm i -g puppeteer@19.2.2 && npm i -g puppeteer-cluster; \
   fi
 
 RUN node --version
