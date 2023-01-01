@@ -15,11 +15,7 @@ runs:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
         # Also copy the files to the container
         options: '-i --init --cap-add=SYS_ADMIN -v ${{ github.workspace }}:${{ github.workspace }}'
-        args: |
-          for file in ${{ inputs.files }}; do
-            cp ${{ github.workspace }}/$file /home/pptruser
-            node $file
-          done
+        args: bash -c "for file in ${{ inputs.files }}; do cp ${{ github.workspace }}/$file /home/pptruser && node $file; done"
 
 
 branding:
