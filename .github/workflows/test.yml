@@ -34,10 +34,10 @@ jobs:
           context: .
           load: true
           push: false
-          build-args: NODE_VERSION=${{ inputs.node-version }}
-          tags: ${{ github.repository }}:local-node-${{ inputs.node-version }}
+          build-args: NODE_VERSION=${{ matrix.node-version }}
+          tags: ${{ github.repository }}:local-node-${{ matrix.node-version }}
           cache-from: |
-            ghcr.io/${{ github.repository }}:node-${{ inputs.node-version }}
+            ghcr.io/${{ github.repository }}:node-${{ matrix.node-version }}
             type=gha
           cache-to: |
             type=gha,mode=max
@@ -45,6 +45,6 @@ jobs:
       - name: Test action with node ${{ matrix.node-version }}
         uses: ./
         with:
-          image: ${{ github.repository }}:local-node-${{ inputs.node-version }}
+          image: ${{ github.repository }}:local-node-${{ matrix.node-version }}
           node-version: ${{ matrix.node-version }}
           args: node test/test.js
