@@ -19,9 +19,9 @@ ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 ENV NODE_VERSION $NODE_VERSION
 
 RUN if [ "$(echo "$NODE_VERSION" | cut -d '.' -f 1)" -lt 14 ]; then \
-    npm i -g puppeteer@13.7.0 && npm i -g puppeteer-cluster; \
+    npm i puppeteer@13.7.0 && npm i puppeteer-cluster; \
   else \
-    npm i -g puppeteer@19.2.2 && npm i -g puppeteer-cluster; \
+    npm i puppeteer@19.2.2 && npm i puppeteer-cluster; \
   fi
 
 RUN node --version
