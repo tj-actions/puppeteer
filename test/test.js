@@ -8,7 +8,12 @@ const puppeteer = require('puppeteer');
   await page.goto('https://news.ycombinator.com', {
     waitUntil: 'networkidle2',
   });
-  await page.pdf({ path: 'test.pdf', format: 'a4' });
+
+  try {
+    await page.pdf({path: 'test.pdf', format: 'a4'});
+  } catch (e) {
+    console.log(e);
+  }
 
   await browser.close();
 })();

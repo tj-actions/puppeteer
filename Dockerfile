@@ -35,11 +35,11 @@ RUN npm install --production
 
 FROM base AS dev
 
+WORKDIR /app
+
 COPY --from=build /app/node_modules /app/node_modules
 
 RUN chown -R chrome:chrome /app
-
-WORKDIR /app
 
 # Run Chrome as non-privileged user
 USER chrome
