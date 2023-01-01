@@ -24,4 +24,4 @@ jobs:
         uses: ./
         with:
           files: test/test.js
-          post-run-command: cd test && ls
+          post-run-command: cat test.pdf
