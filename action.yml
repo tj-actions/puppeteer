@@ -40,7 +40,7 @@ runs:
     - name: Docker Run
       uses: tj-actions/docker-run-action@v1
       with:
-        image: docker://puppeteer:local-node-${{ inputs.node-version }}
+        image: ${{ github.repository }}:local-node-${{ inputs.node-version }}
         args: ${{ inputs.args }}
 
 branding:
