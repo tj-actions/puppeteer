@@ -16,7 +16,7 @@ inputs:
   image:
     description: 'Docker image to use'
     required: false
-    default: 'ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}'
+    default: 'ghcr.io/tj-actions/puppeteer:node-16'
 
 runs:
   using: 'composite'
