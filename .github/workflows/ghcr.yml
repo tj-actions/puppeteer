@@ -41,6 +41,13 @@ jobs:
         with:
           context: .
           push: true
-          build-args: NODE_VERSION=${{ matrix.node-version }}
+          build-args: |
+            NODE_VERSION=${{ matrix.node-version }}
+            WORKDIR=${{ github.workspace }}
           tags: |
             ghcr.io/${{ github.repository }}:node-${{ matrix.node-version }}
+          cache-from: |
+            ghcr.io/${{ github.repository }}:node-${{ matrix.node-version }}
+            type=gha
+          cache-to: |
+            type=gha,mode=max
