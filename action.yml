@@ -10,6 +10,9 @@ outputs:
   container-id:
     description: 'Container ID'
     value: ${{ steps.puppeteer-run.outputs.container-id }}
+  home:
+    description: 'Home directory'
+    value: /home/pptruser
 
 runs:
   using: 'composite'

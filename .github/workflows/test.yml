@@ -26,7 +26,7 @@ jobs:
         uses: tj-actions/docker-cp@v2
         with:
           container: ${{ steps.puppeteer-test.outputs.container-id }}
-          source: /home/pptruser/test.pdf
+          source: ${{ steps.puppeteer-test.outputs.home }}/test.pdf
           destination: test.pdf
 
       - name: Display contents of test.pdf
