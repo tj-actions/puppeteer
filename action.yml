@@ -14,7 +14,7 @@ runs:
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
         options: '-i --init --cap-add=SYS_ADMIN -v ${{ github.workspace }}:${{ github.workspace }}'
-        args: bash -c 'while read -r file; do echo "Running $file..." && mkdir -p $(dirname /home/pptruser/$file) && cp ${{ github.workspace }}/$file /home/pptruser/$file && node $file; done <<< "$(echo ${{ inputs.files }} | xargs -n1)"'
+        args: bash -c 'while read -r file; do echo "Running $file..." && mkdir -p $(dirname /home/pptruser/$file) && cp ${{ github.workspace }}/$file /home/pptruser/$file && node $file; done <<< "$(echo "${{ inputs.files }}" | xargs -n1)"'
 
 
 branding:
