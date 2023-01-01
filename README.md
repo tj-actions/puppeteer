@@ -40,6 +40,8 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 <!-- AUTO-DOC-INPUT:END -->
 
+## Outputs
+
 ### Using docker
 
 ```shell script
