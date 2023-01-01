@@ -23,4 +23,4 @@ jobs:
       - name: Test action
         uses: ./
         with:
-          args: node test/test.py
+          args: node test/test.js
