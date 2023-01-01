@@ -16,6 +16,7 @@ RUN apt-get update \
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
+ENV NODE_VERSION $NODE_VERSION
 
 RUN npm i -g npm && \
     if [ $NODE_VERSION -lt 14 ]; then \
