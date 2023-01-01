@@ -30,4 +30,6 @@ RUN npm install --production
 
 FROM base AS dev
 
-RUN node --version
+COPY --from=build /app/node_modules node_modules
+
+RUN node --version && npm --version && puppeteer --version
