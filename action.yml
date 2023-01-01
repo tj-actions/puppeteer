@@ -10,7 +10,7 @@ runs:
   using: 'composite'
   steps:
     - name: Run puppeteer
-      uses: tj-actions/docker-run-action@v1
+      uses: tj-actions/docker-run-action@v2
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
         options: '-i --init --cap-add=SYS_ADMIN'
