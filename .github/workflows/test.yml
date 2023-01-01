@@ -22,6 +22,6 @@ jobs:
 
       - name: Test action
         uses: ./
+        working-directory: ./test
         with:
-          files: |
-            test/test.js
+          files: test.js
