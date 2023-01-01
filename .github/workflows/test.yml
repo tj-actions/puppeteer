@@ -24,4 +24,4 @@ jobs:
         uses: ./
         with:
           working-directory: test
-          args: node -e "`cat test.js`"
+          args: node test.js
