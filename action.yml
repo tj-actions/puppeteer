@@ -2,8 +2,8 @@ name: puppeteer-chrome
 description: Run Test through Puppeteer, the headless chrome Node API
 author: tj-actions
 inputs:
-  args:
-    description: 'Command to run puppeteer'
+  files:
+    description: 'Files to run'
     required: true
 
 runs:
@@ -13,8 +13,13 @@ runs:
       uses: tj-actions/docker-run-action@v2
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
-        options: '-i --init --cap-add=SYS_ADMIN'
-        args: ${{ inputs.args }}
+        # Also copy the files to the container
+        options: '-i --init --cap-add=SYS_ADMIN -v ${{ github.workspace }}:${{ github.workspace }}'
+        args: |
+          for file in ${{ inputs.files }}; do
+            cp ${{ github.workspace }}/$file /home/pptruser
+            node $file
+          done
 
 
 branding:

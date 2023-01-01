@@ -23,4 +23,5 @@ jobs:
       - name: Test action
         uses: ./
         with:
-          args: ls
+          files: |
+            test.js
