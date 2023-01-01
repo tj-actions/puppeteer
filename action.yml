@@ -16,17 +16,25 @@ inputs:
   image:
     description: 'Docker image to use'
     required: false
-    default: 'ghcr.io/tj-actions/puppeteer:node-16'
 
 runs:
   using: 'composite'
   steps:
-    - name: Docker Run
+    - name: Docker Run with ${{ inputs.image }}
+      if: ${{ inputs.image }}
       uses: tj-actions/docker-run-action@v1
       with:
         image: ${{ inputs.image }}
         options: '--cap-add=SYS_ADMIN'
         args: ${{ inputs.args }}
+    - name: Docker Run with ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}
+      if: !${{ inputs.image }}
+      uses: tj-actions/docker-run-action@v1
+      with:
+        image: ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}
+        options: '--cap-add=SYS_ADMIN'
+        args: ${{ inputs.args }}
+
 
 branding:
   icon: camera-off

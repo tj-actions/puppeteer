@@ -1,4 +1,5 @@
 ARG NODE_VERSION
+ARG WORKDIR
 
 FROM node:$NODE_VERSION-buster AS base
 
@@ -35,11 +36,13 @@ RUN npm install --production
 
 FROM base AS dev
 
-WORKDIR /app
+ENV WORKDIR $WORKDIR
 
-COPY --from=build /app/node_modules /app/node_modules
+WORKDIR $WORKDIR
 
-RUN chown -R chrome:chrome /app
+COPY --from=build /app/node_modules $WORKDIR/node_modules
+
+RUN chown -R chrome:chrome $WORKDIR
 
 # Run Chrome as non-privileged user
 USER chrome
