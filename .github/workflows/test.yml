@@ -16,36 +16,12 @@ jobs:
       fail-fast: false
       matrix:
         platform: [ubuntu-latest]
-        node-version: [14, 15, 16]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.2.0
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2.1.0
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2.2.1
-
-      - name: Docker Build
-        uses: docker/build-push-action@v3
-        id: docker-build
-        with:
-          context: .
-          load: true
-          push: false
-          build-args: |
-            NODE_VERSION=${{ matrix.node-version }}
-          tags: ${{ github.repository }}:local-node-${{ matrix.node-version }}
-          cache-from: |
-            ghcr.io/${{ github.repository }}:node-${{ matrix.node-version }}
-            type=gha
-          cache-to: |
-            type=gha,mode=max
-
-      - name: Test action with node ${{ matrix.node-version }}
+      - name: Test action
         uses: ./
         with:
-          image: ${{ github.repository }}:local-node-${{ matrix.node-version }}
-          node-version: ${{ matrix.node-version }}
-          args: node test/test.js
+          working-directory: test
+          args: npm test

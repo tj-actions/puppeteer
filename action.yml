@@ -2,40 +2,23 @@ name: puppeteer-chrome
 description: Run Test through Puppeteer, the headless chrome Node API
 author: tj-actions
 inputs:
-  token:
-    description: '[GITHUB_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) or a repo scoped [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)'
-    required: true
-    default: ${{ github.token }}
-  node-version:
-    description: 'Node version'
+  working-directory:
+    description: 'Working directory'
     required: false
-    default: '14'
+    default: '.'
   args:
     description: 'Command to run puppeteer'
     required: true
-  image:
-    description: 'Docker image to use'
-    required: false
-    default: ''
 
 runs:
   using: 'composite'
   steps:
-    - name: Docker Run with ${{ inputs.image }}
-      if: ${{ inputs.image }} != ''
+    - name: Run puppeteer
       uses: tj-actions/docker-run-action@v1
       with:
-        image: ${{ inputs.image }}
+        image: ghcr.io/puppeteer/puppeteer:19.4.1
         options: '--cap-add=SYS_ADMIN'
-        workdir: /app
-        args: ${{ inputs.args }}
-    - name: Docker Run with ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}
-      if: ${{ inputs.image }} == ''
-      uses: tj-actions/docker-run-action@v1
-      with:
-        image: ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}
-        options: '--cap-add=SYS_ADMIN'
-        workdir: /app
+        workdir: ${{ inputs.working-directory }}
         args: ${{ inputs.args }}
 
 

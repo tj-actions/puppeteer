@@ -1,13 +1,22 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
+  let args = ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu'];
+
   const browser = await puppeteer.launch({
     headless: true,
+    args: args,
+    ignoreDefaultArgs: ['--disable-extensions'],
+    executablePath: '/usr/bin/google-chrome',
   });
   const page = await browser.newPage();
-  await page.goto('https://news.ycombinator.com', {
-    waitUntil: 'networkidle2',
-  });
+  try {
+    await page.goto('https://google.com', {
+      waitUntil: 'load',
+    });
+  } catch (e) {
+    console.log(e);
+  }
 
   try {
     await page.pdf({path: 'test.pdf', format: 'a4'});
