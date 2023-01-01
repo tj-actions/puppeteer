@@ -1,5 +1,4 @@
 ARG NODE_VERSION
-ARG WORKDIR
 
 FROM node:$NODE_VERSION-buster AS base
 
@@ -15,34 +14,31 @@ RUN apt-get update \
      && apt-get install -y google-chrome-stable --no-install-recommends \
      && rm -rf /var/lib/apt/lists/*
 
-ENV WORKDIR $WORKDIR
-
-WORKDIR $WORKDIR
-
 # Create a user to run Chrome as
 RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
     && mkdir -p /home/chrome \
-    && chown -R chrome:chrome /home/chrome \
-    && chown -R chrome:chrome $WORKDIR
+    && chown -R chrome:chrome /home/chrome
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
+
+WORKDIR /app
+
+RUN chown -R chrome:chrome /app
 
 FROM base AS build
 
 ENV NODE_VERSION $NODE_VERSION
 
-ADD package.json package-lock.json ./
+ADD package.json package-lock.json /app/
 
 RUN chown -R chrome:chrome /app
 
 RUN npm install --production
 
-FROM base AS dev
+FROM base AS runtime
 
-COPY --from=build /app/node_modules $WORKDIR/node_modules
-
-RUN chown -R chrome:chrome $WORKDIR
+COPY --from=build /app/node_modules /app/node_modules
 
 # Run Chrome as non-privileged user
 USER chrome

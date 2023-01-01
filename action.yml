@@ -33,6 +33,7 @@ runs:
       with:
         image: ghcr.io/tj-actions/puppeteer:node-${{ inputs.node-version }}
         options: '--cap-add=SYS_ADMIN'
+        workdir: ${{ github.workspace }}
         args: ${{ inputs.args }}
 
 
