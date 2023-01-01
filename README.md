@@ -45,7 +45,7 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 ### Using docker
 
 ```shell script
-docker pull ghcr.io/tj-actions/puppeteer:node-12
+docker pull ghcr.io/tj-actions/puppeteer:node-14
 ```
 
 | Supported node versions |
