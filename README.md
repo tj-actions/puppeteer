@@ -25,16 +25,22 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE  | REQUIRED |         DEFAULT         |                                                                                                                                                  DESCRIPTION                                                                                                                                                  |
-|--------------|--------|----------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     args     | string |   true   |                         |                                                                                                                                           Command to run puppeteer                                                                                                                                            |
-| node-version | string |  false   |         `"14"`          |                                                                                                                                                 Node version                                                                                                                                                  |
-|    token     | string |   true   | `"${{ github.token }}"` | [GITHUB\_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) or a repo scoped [PersonalAccess Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) |
+| INPUT |  TYPE  | REQUIRED | DEFAULT | DESCRIPTION  |
+|-------|--------|----------|---------|--------------|
+| files | string |   true   |         | Files to run |
 
 <!-- AUTO-DOC-INPUT:END -->
 
 ## Outputs
 
+<!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
+
+|    OUTPUT    |  TYPE  |  DESCRIPTION   |
+|--------------|--------|----------------|
+| container-id | string |  Container ID  |
+|     home     | string | Home directory |
+
+<!-- AUTO-DOC-OUTPUT:END -->
 
 *   Free software: [MIT license](LICENSE)
 
