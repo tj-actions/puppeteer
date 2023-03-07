@@ -12,7 +12,7 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Run test
         uses: tj-actions/puppeteer@v4
         id: puppeteer
