@@ -19,7 +19,7 @@ runs:
   steps:
     - name: Run puppeteer
       id: puppeteer-run
-      uses: tj-actions/docker-run@v2
+      uses: tj-actions/docker-run@957ff81e54cb1f133ad144523bfa65cd14ae67d6 # renovate: tag=v2.2.0
       with:
         image: ghcr.io/puppeteer/puppeteer:19.4.1
         name: puppeteer-chrome
