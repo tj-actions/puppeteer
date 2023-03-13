@@ -1,25 +1,45 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/puppeteer/tree/HEAD)
+## [v4](https://github.com/tj-actions/puppeteer/tree/v4) (2023-03-13)
 
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.0.0...HEAD)
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.1.0...v4)
+
+## [v4.1.0](https://github.com/tj-actions/puppeteer/tree/v4.1.0) (2023-03-13)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.0.0...v4.1.0)
+
+**Fixed bugs:**
+
+- [BUG] The action fails with a `cp: -r not specified; omitting directory [\#139](https://github.com/tj-actions/puppeteer/issues/139)
 
 **Closed issues:**
 
 - Update Docker image entrypoint to use puppeteer cli [\#14](https://github.com/tj-actions/puppeteer/issues/14)
+- Dependency Dashboard [\#6](https://github.com/tj-actions/puppeteer/issues/6)
+
+**Merged pull requests:**
+
+- pin: docker-run action to the latest full length sha [\#148](https://github.com/tj-actions/puppeteer/pull/148) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/release-tagger action to v3 [\#147](https://github.com/tj-actions/puppeteer/pull/147) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v2.2.3 [\#146](https://github.com/tj-actions/puppeteer/pull/146) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.18 [\#145](https://github.com/tj-actions/puppeteer/pull/145) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v2.2.0 [\#144](https://github.com/tj-actions/puppeteer/pull/144) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v2.0.3 [\#143](https://github.com/tj-actions/puppeteer/pull/143) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v2 [\#142](https://github.com/tj-actions/puppeteer/pull/142) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v4.3.0 [\#141](https://github.com/tj-actions/puppeteer/pull/141) ([renovate[bot]](https://github.com/apps/renovate))
+- Update pascalgn/automerge-action action to v0.15.6 [\#140](https://github.com/tj-actions/puppeteer/pull/140) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.7.4 [\#138](https://github.com/tj-actions/puppeteer/pull/138) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.3.0 [\#137](https://github.com/tj-actions/puppeteer/pull/137) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.7.3 [\#135](https://github.com/tj-actions/puppeteer/pull/135) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v4 [\#133](https://github.com/tj-actions/puppeteer/pull/133) ([jackton1](https://github.com/jackton1))
 
 ## [v4.0.0](https://github.com/tj-actions/puppeteer/tree/v4.0.0) (2023-01-01)
 
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4...v4.0.0)
-
-## [v4](https://github.com/tj-actions/puppeteer/tree/v4) (2023-01-01)
-
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v3.2...v4)
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v3.2...v4.0.0)
 
 **Closed issues:**
 
 - Need some help... [\#87](https://github.com/tj-actions/puppeteer/issues/87)
-- Dependency Dashboard [\#6](https://github.com/tj-actions/puppeteer/issues/6)
 - Deploy to Docker hub and update documentation [\#2](https://github.com/tj-actions/puppeteer/issues/2)
 
 **Merged pull requests:**
