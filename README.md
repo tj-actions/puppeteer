@@ -27,9 +27,9 @@ See [test](https://github.com/tj-actions/puppeteer/blob/main/.github/workflows/t
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-| INPUT |  TYPE  | REQUIRED | DEFAULT | DESCRIPTION  |
-|-------|--------|----------|---------|--------------|
-| files | string |   true   |         | Files to run |
+|                      INPUT                      |  TYPE  | REQUIRED | DEFAULT | DESCRIPTION  |
+|-------------------------------------------------|--------|----------|---------|--------------|
+| <a name="input_files"></a>[files](#input_files) | string |   true   |         | Files to run |
 
 <!-- AUTO-DOC-INPUT:END -->
 
@@ -37,10 +37,10 @@ See [test](https://github.com/tj-actions/puppeteer/blob/main/.github/workflows/t
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
 
-|    OUTPUT    |  TYPE  |  DESCRIPTION   |
-|--------------|--------|----------------|
-| container-id | string |  Container ID  |
-|     home     | string | Home directory |
+|                                 OUTPUT                                 |  TYPE  |  DESCRIPTION   |
+|------------------------------------------------------------------------|--------|----------------|
+| <a name="output_container-id"></a>[container-id](#output_container-id) | string |  Container ID  |
+|             <a name="output_home"></a>[home](#output_home)             | string | Home directory |
 
 <!-- AUTO-DOC-OUTPUT:END -->
 
