@@ -20,14 +20,14 @@ jobs:
         uses: ./
         id: puppeteer-test
         with:
-          files: test/test.js
+          files: test/test.js  # The test generates a test.pdf file in the home directory the steps below are used to verify the contents of the pdf file.
 
       - name: Copy test output
         uses: tj-actions/docker-cp@v2
         with:
           container: ${{ steps.puppeteer-test.outputs.container-id }}
-          source: ${{ steps.puppeteer-test.outputs.home }}/test.pdf
-          destination: test.pdf
+          source: ${{ steps.puppeteer-test.outputs.home }}/test.pdf  # <-- Replace this input if copied or Remove this step
+          destination: test.pdf  # <-- Replace this input if copied or Remove this step
 
-      - name: Display contents of test.pdf
-        run: cat test.pdf
+      - name: Display contents of test.pdf  # <-- Replace this file name if copied or Remove this step
+        run: cat test.pdf  # <-- Replace this file name if copied or Remove this step
