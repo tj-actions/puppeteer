@@ -14,7 +14,7 @@ Run Test through [puppeteer](https://github.com/puppeteer/puppeteer), the headle
     steps:
       - uses: actions/checkout@v3
       - name: Run test
-        uses: tj-actions/puppeteer@v4
+        uses: tj-actions/puppeteer@v5
         id: puppeteer
         with:
           files: |
