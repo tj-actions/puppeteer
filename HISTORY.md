@@ -1,12 +1,69 @@
 # Changelog
 
-## [v4](https://github.com/tj-actions/puppeteer/tree/v4) (2023-03-13)
+## [v5.0.0](https://github.com/tj-actions/puppeteer/tree/v5.0.0) (2023-10-18)
 
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.1.0...v4)
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v5...v5.0.0)
+
+## [v5](https://github.com/tj-actions/puppeteer/tree/v5) (2023-10-18)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.1.0...v5)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#6](https://github.com/tj-actions/puppeteer/issues/6)
+
+**Merged pull requests:**
+
+- upgrade: puppeteer to v21.3.7 [\#190](https://github.com/tj-actions/puppeteer/pull/190) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update actions/checkout action to v4.1.1 [\#189](https://github.com/tj-actions/puppeteer/pull/189) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.1.0 [\#188](https://github.com/tj-actions/puppeteer/pull/188) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4.1.0 [\#187](https://github.com/tj-actions/puppeteer/pull/187) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v3.0.1 [\#186](https://github.com/tj-actions/puppeteer/pull/186) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v4 [\#185](https://github.com/tj-actions/puppeteer/pull/185) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/release-tagger action to v4 [\#184](https://github.com/tj-actions/puppeteer/pull/184) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.6.0 [\#183](https://github.com/tj-actions/puppeteer/pull/183) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#182](https://github.com/tj-actions/puppeteer/pull/182) ([tj-actions-bot](https://github.com/tj-actions-bot))
+- chore\(deps\): update tj-actions/auto-doc action to v3 [\#181](https://github.com/tj-actions/puppeteer/pull/181) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.9.0 [\#180](https://github.com/tj-actions/puppeteer/pull/180) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.8.0 [\#179](https://github.com/tj-actions/puppeteer/pull/179) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.7.1 [\#178](https://github.com/tj-actions/puppeteer/pull/178) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v16 [\#177](https://github.com/tj-actions/puppeteer/pull/177) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v5.0.2 [\#176](https://github.com/tj-actions/puppeteer/pull/176) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/verify-changed-files action to v15 [\#175](https://github.com/tj-actions/puppeteer/pull/175) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.5.3 [\#174](https://github.com/tj-actions/puppeteer/pull/174) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.7.0 [\#173](https://github.com/tj-actions/puppeteer/pull/173) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.6.1 [\#172](https://github.com/tj-actions/puppeteer/pull/172) ([renovate[bot]](https://github.com/apps/renovate))
+- chore: switch to major version [\#171](https://github.com/tj-actions/puppeteer/pull/171) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update tj-actions/github-changelog-generator action to v1.19 [\#170](https://github.com/tj-actions/puppeteer/pull/170) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.5.4 [\#169](https://github.com/tj-actions/puppeteer/pull/169) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.5.3 [\#168](https://github.com/tj-actions/puppeteer/pull/168) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.5.2 [\#167](https://github.com/tj-actions/puppeteer/pull/167) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.5.1 [\#166](https://github.com/tj-actions/puppeteer/pull/166) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.5.0 [\#165](https://github.com/tj-actions/puppeteer/pull/165) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v5.0.1 [\#164](https://github.com/tj-actions/puppeteer/pull/164) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.4.0 [\#163](https://github.com/tj-actions/puppeteer/pull/163) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.5.2 [\#162](https://github.com/tj-actions/puppeteer/pull/162) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.5.1 [\#161](https://github.com/tj-actions/puppeteer/pull/161) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v5 [\#160](https://github.com/tj-actions/puppeteer/pull/160) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.3.2 [\#159](https://github.com/tj-actions/puppeteer/pull/159) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.3.1 [\#158](https://github.com/tj-actions/puppeteer/pull/158) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions/checkout action to v3.5.0 [\#157](https://github.com/tj-actions/puppeteer/pull/157) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.3.0 [\#156](https://github.com/tj-actions/puppeteer/pull/156) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.2.7 [\#155](https://github.com/tj-actions/puppeteer/pull/155) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2.2.5 [\#154](https://github.com/tj-actions/puppeteer/pull/154) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/verify-changed-files from 13 to 14 [\#153](https://github.com/tj-actions/puppeteer/pull/153) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump tj-actions/auto-doc from 2.2.3 to 2.2.4 [\#152](https://github.com/tj-actions/puppeteer/pull/152) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore\(deps\): update actions/checkout action to v3.4.0 [\#151](https://github.com/tj-actions/puppeteer/pull/151) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v4.2.4 [\#150](https://github.com/tj-actions/puppeteer/pull/150) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v4.1.0 [\#149](https://github.com/tj-actions/puppeteer/pull/149) ([jackton1](https://github.com/jackton1))
 
 ## [v4.1.0](https://github.com/tj-actions/puppeteer/tree/v4.1.0) (2023-03-13)
 
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.0.0...v4.1.0)
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4...v4.1.0)
+
+## [v4](https://github.com/tj-actions/puppeteer/tree/v4) (2023-03-13)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.0.0...v4)
 
 **Fixed bugs:**
 
@@ -15,7 +72,6 @@
 **Closed issues:**
 
 - Update Docker image entrypoint to use puppeteer cli [\#14](https://github.com/tj-actions/puppeteer/issues/14)
-- Dependency Dashboard [\#6](https://github.com/tj-actions/puppeteer/issues/6)
 
 **Merged pull requests:**
 
