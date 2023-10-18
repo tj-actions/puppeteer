@@ -1,12 +1,21 @@
 # Changelog
 
-## [v5.0.0](https://github.com/tj-actions/puppeteer/tree/v5.0.0) (2023-10-18)
-
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v5...v5.0.0)
-
 ## [v5](https://github.com/tj-actions/puppeteer/tree/v5) (2023-10-18)
 
-[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.1.0...v5)
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v5.0.1...v5)
+
+## [v5.0.1](https://github.com/tj-actions/puppeteer/tree/v5.0.1) (2023-10-18)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v5.0.0...v5.0.1)
+
+**Merged pull requests:**
+
+- upgrade: puppeteer from v21.3.7 to v21.3.8 [\#192](https://github.com/tj-actions/puppeteer/pull/192) ([jackton1](https://github.com/jackton1))
+- Upgraded to v5 [\#191](https://github.com/tj-actions/puppeteer/pull/191) ([tj-actions-bot](https://github.com/tj-actions-bot))
+
+## [v5.0.0](https://github.com/tj-actions/puppeteer/tree/v5.0.0) (2023-10-18)
+
+[Full Changelog](https://github.com/tj-actions/puppeteer/compare/v4.1.0...v5.0.0)
 
 **Closed issues:**
 
